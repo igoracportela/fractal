@@ -1,0 +1,7 @@
+.span9
+  %h1= t('subscribers.edit')
+  = form_for :subscriber, :url => admin_subscribers_path do |f|
+    = render :partial => "form", :locals => {:f => f}
+  = link_to t('show'), admin_subscribers_path
+  = link_to t('back'), admin_subscribers_path
+  = content_for :sidebar, render(:partial => 'admin/sidebar')

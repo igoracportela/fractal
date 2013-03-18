@@ -1,0 +1,40 @@
+%li.nav-header Menu
+%li
+  = link_to admin_path, :class => params[:controller] == 'admin/panel' ? 'active' : '' do
+    %span= t('menu.panel')
+%li
+  = link_to admin_admins_path, :class => params[:controller] == 'admin/admins' ? 'active' : '' do
+    %span= t('menu.admins')
+
+- if subscribers_activated?
+  %li
+    = link_to admin_subscribers_path, :class => params[:controller] == 'admin/subscribers' ? 'active' : '' do
+      %span= t('menu.subscribers')
+
+- if pages_activated?
+  %li
+    = link_to admin_pages_path, :class => params[:controller] == 'admin/pages' ? 'active' : '' do
+      %span= t('menu.pages')
+
+%li
+  %a{:href => "#"} Link
+%li.nav-header Sidebar
+%li
+  %a{:href => "#"} Link
+%li
+  %a{:href => "#"} Link
+%li
+  %a{:href => "#"} Link
+%li
+  %a{:href => "#"} Link
+%li
+  %a{:href => "#"} Link
+%li
+  %a{:href => "#"} Link
+%li.nav-header Sidebar
+%li
+  %a{:href => "#"} Link
+%li
+  %a{:href => "#"} Link
+%li
+  %a{:href => "#"} Link

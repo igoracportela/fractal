@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @document.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @document.description %>
+</p>
+
+<p>
+  <b>Archive:</b>
+  <%= @document.archive %>
+</p>
+
+<p>
+  <b>Slug:</b>
+  <%= @document.slug %>
+</p>
+
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>

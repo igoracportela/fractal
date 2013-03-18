@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: fractal_project_development
+  pool: 5
+  username: postgres
+  password: admin
+  host: localhost
+  port: 5432
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: fractal_project_test
+  pool: 5
+  username: postgres
+  password: admin
+  host: localhost
+  port: 5432
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: fractal_project_production
+  pool: 5
+  username: fractal_project
+  password:

@@ -1,0 +1,19 @@
+<div class="title">
+	<h5>Administradores</h5>
+</div>
+
+<div class="widget first tabsRight">
+	<div class="head">
+		<h5>Cadastro de Administrador</h5>
+	</div>
+	<ul class="tabs">
+		<li>
+			<%= link_to image_tag('web-app-theme/icons/dark/list.png') + " Administradores", admin_admins_path %>
+		</li>
+	</ul>
+	<%= form_for :admin, :url => admin_admins_path, :html => { :class => 'mainForm', :id => 'valid' } do |f| -%>
+    	<%= render :partial => "form", :locals => {:f => f} %>
+    <% end -%>
+</div>
+
+<% content_for :sidebar, render(:partial => 'admin/sidebar') -%>

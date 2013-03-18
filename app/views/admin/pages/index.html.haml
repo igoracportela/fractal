@@ -1,0 +1,27 @@
+.span9
+  .span3
+    %h3.muted= t('pages.list')
+  .span3
+    = link_to t('new'), new_admin_page_path, class: "btn"
+  %table.table.table-hover
+    %thead
+      %tr
+        %th Title
+        %th Content
+        %th Slug
+        %th
+        %th
+        %th
+    %tbody
+      - @pages.each do |page|
+        %tr
+          %td= page.title
+          %td= page.content
+          %td= page.slug
+          %td= link_to '', admin_page_path(page), class: "icon-search"
+          %td= link_to '', edit_admin_page_path(page), class: "icon-pencil"
+          %td= link_to '', admin_page_path(page), method: :delete, data: { confirm: t('confirm') }
+
+    
+
+    = content_for :sidebar, render(:partial => 'admin/sidebar')

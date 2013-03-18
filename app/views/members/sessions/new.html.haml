@@ -1,0 +1,21 @@
+.login
+  %center= image_tag('site/projeto_fractal.jpg')
+  %h3= t('shared.admin')
+  - flash.each do |type, message|
+    .alert.fade.in
+      %button.close{"data-dismiss" => "alert", :type => "button"} ×
+      %strong
+        = message
+  = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {class: "form-signin"}) do |f|
+    = f.email_field :email, placeholder: "Email", class: "input-block-level" 
+    = f.password_field :password, placeholder: "Senha", class: "input-block-level"
+
+    / - if devise_mapping.rememberable?
+    /   .checkbox
+    /     = f.check_box :remember_me
+    /     = f.label :remember_me, "Lembrar da senha?"
+    = f.submit "Entrar", class: "btn btn-custom large"
+    %center
+      = link_to 'Esqueci minha senha', new_admin_password_path
+
+

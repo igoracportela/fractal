@@ -1,0 +1,56 @@
+
+  <div class="rowElem">
+    <%= f.label :nome, 'Nome' %>
+    <div class="formRight">
+    	<%= f.text_field :nome, :class => 'text_field' %>
+    </div>
+    <div class="fix"></div>
+  </div>
+
+  <div class="rowElem">
+    <%= f.label :telefone, 'Telefone' %>
+    <div class="formRight">
+    	<%= f.text_field :telefone, :class => 'text_field' %>
+    </div>
+    <div class="fix"></div>
+  </div>
+
+  <div class="rowElem">
+    <%= f.label :super_admin, 'Super Administrador' %>
+    <div class="formRight">
+    	<%= f.check_box :super_admin, :class => 'check_box' %>
+    </div>
+    <div class="fix"></div>
+  </div>
+
+  <div class="rowElem">
+    <%= f.label :email, 'Email' %>
+    <div class="formRight">
+    	<%= f.text_field :email, :class => 'text_field' %>
+    </div>
+    <div class="fix"></div>
+  </div>
+
+  <% unless params[:action] == 'edit' %>
+  <div class="rowElem">
+    <%= f.label :password, 'Senha' %>
+    <div class="formRight">
+    	<%= f.password_field :password, :class => 'text_field' %>
+    </div>
+    <div class="fix"></div>
+  </div>
+  
+  <div class="rowElem">
+    <%= f.label :password_confirmation, 'Confirmação de Senha' %>
+    <div class="formRight">
+    	<%= f.password_field :password_confirmation, :class => 'text_field' %>
+    </div>
+    <div class="fix"></div>
+  </div>
+  
+  <% end %>
+
+<%= link_to 'Cancelar', admin_admins_path, :class => 'button basicBtn submitForm' %>
+<%= f.submit 'Salvar', :class => 'greenBtn submitForm' %>
+
+<div class="fix"></div>

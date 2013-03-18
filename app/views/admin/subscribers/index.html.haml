@@ -1,0 +1,20 @@
+.span9
+  %h1= t('subscribers.list')
+  %table.table.table-condensed
+    %thead
+      %tr
+        %th= t('shared.name')
+        %th= t('shared.email')
+        %th= t('shared.phone')
+    %tbody
+      - @subscribers.each do |subscriber|
+        %tr
+          %td= subscriber.name
+          %td= subscriber.email
+          %td= subscriber.phone
+          %td= link_to t('show'), admin_subscriber_path(subscriber)
+          %td= link_to t('edit'), edit_admin_subscriber_path(subscriber)
+          %td= link_to t('destroy'), admin_subscriber_path(subscriber), method: :delete, data: { confirm: t('confirm') }
+  %br/
+  = link_to t('subscribers.new'), new_admin_subscriber_path
+- content_for :sidebar, render(:partial => 'admin/sidebar')

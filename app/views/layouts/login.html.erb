@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= t('title') %></title>
+		<%= stylesheet_link_tag "application", "admin/login" %>
+		<%= javascript_include_tag "admin/admin" %>
+		<%= csrf_meta_tag %>
+		<link href="/assets/site/icon-wakeup.png" rel="icon" type="image/png"/>
+	</head>
+	<body>
+	  <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Fractal</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              <%= link_to image_tag('pt.png'), url_for( :locale => 'pt-BR' ), :title => "Português" %>
+              <%= link_to image_tag('en.png'), url_for( :locale => 'en' ), :title => "English" %>
+            </p>
+            <ul class="nav">
+              <li><%= link_to t('back_site'), root_path %></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+	  <div class="container-fluid">
+	    <%= yield %>
+	  <footer>
+	    <center><%= t('opensource') %> <%= link_to 'open-source', 'http://github.com/igorportela', target: 'blank' %> &copy; 2012 - <%= Time.now.year%>. <%= t('footer') %>.</center>
+	  </footer>
+		</div>
+	  
+	</body>
+</html>

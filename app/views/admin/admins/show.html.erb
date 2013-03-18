@@ -1,0 +1,62 @@
+<div class="title">
+	<h5>Administradores</h5>
+</div>
+
+<div class="widget first tabsRight">
+	<div class="head">
+		<h5>Visualização de Administrador</h5>
+	</div>
+	<ul class="tabs">
+		<li>
+			<%= link_to image_tag('web-app-theme/icons/dark/list.png') + " Administradores", admin_admins_path %>
+		</li>
+		<li>
+			<%= link_to image_tag('web-app-theme/icons/dark/add.png') + " Novo Administrador", new_admin_admin_path %>
+		</li>
+	</ul>
+	
+        <div class="rowElem">
+          	<label>Nome:</label>
+    		<div class="formRight">
+    			<%= @admin.nome %>
+    		</div>
+    		<div class="fix"></div>
+    	</div>
+
+        <div class="rowElem">
+          	<label>Telefone:</label>
+    		<div class="formRight">
+    			<%= @admin.telefone %>
+    		</div>
+    		<div class="fix"></div>
+    	</div>
+
+        <div class="rowElem">
+          	<label>Super Admin:</label>
+    		<div class="formRight">
+    			<%= to_boolean @admin.super_admin? %>
+    		</div>
+    		<div class="fix"></div>
+    	</div>
+
+        <div class="rowElem">
+          	<label>Email:</label>
+    		<div class="formRight">
+    			<%= @admin.email %>
+    		</div>
+    		<div class="fix"></div>
+    	</div>
+
+    <%= link_to admin_admin_path(@admin), :method => "delete", :class => "basicBtn submitForm btnIconLeft mr10", :confirm => "Deseja remover?" do %>
+    	<%= image_tag 'web-app-theme/icons/dark/trash.png', :class => 'icon' %>
+    	<span>Remover</span>
+    <% end %>
+   	<%= link_to edit_admin_admin_path(@admin), :class => "basicBtn submitForm btnIconLeft mr10" do %>
+   		<%= image_tag 'web-app-theme/icons/dark/pencil.png', :class => 'icon' %>
+   		<span>Editar</span>
+   	<% end %>
+
+	<div class="fix"></div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'admin/sidebar') -%>

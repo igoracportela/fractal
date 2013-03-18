@@ -1,0 +1,98 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+en:
+  footer: "All rights reserved"
+  opensource: "This is a project"
+  title: "Projeto Fractal"
+  admin: "Administration"
+  back_site: "Return to site"
+  search: "Search here..."
+  read_more: "Read more"
+  read_more_blog: "Read the blog"
+  read_more_portfolio: "View all our projects"
+  last_services: "Last services"
+  last_news: "Last News"
+  categories: "News Categories"
+  categories_portfolio: "Portfolio Categories"
+  all: "All"
+  page: "Pages"
+  without_datas: "No register yet!"
+  more_info: "More informations"
+  back: "Back"
+  save: "Salve"
+  edit: "Edit"
+  show: "Show"
+  cancel: "Cancel my account"
+  destroy: "Destroy"
+  new: "Create new"
+  confirm: "Are you sure?"
+
+  shared:
+    name: "Name"
+    email: "Email"
+    phone: "Phone"
+    admin: "Administration"
+
+  login:
+    password: "Password"
+    sign_in: "Sign in"
+    forget: "Forgot your password?"
+    remember: "Remember me"
+
+  menu:
+    main: "Home"
+    service: "Services"
+    blog: "Blog"
+    portfolio: "Portfolio"
+    contact: 'Contact'
+    team: "Team"
+    admins: "Administration"
+    panel: "Panel"
+    subscribers: "Subscribers"
+    pages: "Pages"
+
+  subscribers:
+    list: "List of Subscribers"
+    new: "New Subscriber"
+    edit: "Edit Subscriber"
+
+  pages:
+    contact_form: "Contact Form"
+    list: "List of pages"
+
+  contact:
+    address:
+      country: "Brazil"
+      state: "Paraíba (PB)"
+      city: "João Pessoa"
+      street: "Marechal Experidião Rosa"
+      zip: "58041-070"
+      number: "214"
+      phone: "(83) 8818.2046 / (83) 8801.3269"
+    title:
+      city: 'City'
+      state: 'State'
+      country: 'Country'
+      street: 'Street'
+      zip: "ZIP"
+      number: "Number"
+      phone_: "Phone"
+      email_: "Email"
+
+      name: "Enter your full name"
+      email: "Enter your full email address"
+      phone: "Enter your phone number"
+      message: "Enter your message"
+    send: "Send your message"
+
+  portfolio:
+    website: "Visit website"
+
+  social:
+    facebook: "Become a fan"
+    twitter: "Follow our tweets"
+    youtube: "View our videos"
+
+  main:
+    apresentation_title: "The Wake Up Systems is summed up in three words:"
+    apresentation_text: "Innovation, Quality and Commitment."

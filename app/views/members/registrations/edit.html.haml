@@ -1,0 +1,16 @@
+.span9
+  %h3.muted #{t('edit')} #{resource_name.to_s.humanize}
+
+  = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+    = f.error_notification
+    = f.input :email, :required => true, :autofocus => true
+    = f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false
+    = f.input :password_confirmation, :required => false
+    = f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true
+    = f.button :submit, t('save'), class: "btn btn-primary"
+  
+  %h3.muted ----------------------------------------------------------
+
+  %p Deseja cancelar sua conta e apagar odos os seus dados? #{link_to t('cancel'), registration_path(resource_name), :confirm => "Are you sure?", :method => :delete, class: "btn btn-danger"}
+
+= content_for :sidebar, render(:partial => 'admin/sidebar')
