@@ -1,5 +1,0 @@
-## About
-
-This project was my project base to a lot of others projects. It likes a CMS.
-
-Created at 2013
